@@ -18,7 +18,7 @@ Official Implementation for Diffusion-Based Scene Graph to Image Generation with
 ## Qualitative Evaluations
 ### 1. Image Generation from Scene Graphs
 
-#### 1.1. On VG Dataset
+#### 1.1. On Visual Genome (VG) Dataset
 <div align=center><img width="700" alt="image" src="https://user-images.githubusercontent.com/62683396/202874401-a33d16fb-e171-4734-91d8-23af802a385c.png">
 </div>
 
