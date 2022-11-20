@@ -32,3 +32,7 @@ We will release the code and trained models soon.
 ### 2. Semantic Image Manipulation
 
 <img width="1298" alt="image" src="https://user-images.githubusercontent.com/62683396/202852465-4c41d8b1-1f3a-4eca-9a5b-89e95ca1224c.png">
+
+### 3. Ablation Study
+<div align=center><img width="478" alt="image" src="https://user-images.githubusercontent.com/62683396/202898893-ead4c0d4-1ecf-4688-935a-d65880d5ea61.png"></div>
+
