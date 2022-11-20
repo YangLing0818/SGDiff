@@ -1,4 +1,4 @@
-# SGDiff
+# Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training
 <a href="https://arxiv.org/abs/2206.02779"><img src="https://img.shields.io/badge/arXiv-2206.02779-b31b1b.svg" height=22.5></a>
 
 Official Implementation for Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training.
@@ -18,11 +18,11 @@ Official Implementation for Diffusion-Based Scene Graph to Image Generation with
 ## Qualitative Evaluations
 ### 1. Image Generation from Scene Graphs
 
-#### 1.1. On Visual Genome (VG) Dataset
+#### 1.1. On [Visual Genome](https://visualgenome.org/) (VG) Dataset
 <div align=center><img width="700" alt="image" src="https://user-images.githubusercontent.com/62683396/202874401-a33d16fb-e171-4734-91d8-23af802a385c.png">
 </div>
 
-#### 1.2. On COCO-Stuff Dataset
+#### 1.2. On [COCO-Stuff](https://github.com/nightrome/cocostuff) Dataset
 
 <div align=center><img width="680" alt="image" src="https://user-images.githubusercontent.com/62683396/202852055-23000ad2-9f21-41d0-a3e5-0b1b6f5eff36.png"></div>
 
