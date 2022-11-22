@@ -1,7 +1,7 @@
 # Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training
 <a href="https://arxiv.org/abs/2206.02779"><img src="https://img.shields.io/badge/arXiv-2206.02779-b31b1b.svg" height=22.5></a>
 
-Official Implementation for Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training. 
+Official Implementation for [Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training](https://arxiv.org/abs/2211.11138). 
 
 We will release the code and trained models soon.
 
