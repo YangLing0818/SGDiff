@@ -3,7 +3,7 @@
 
 Official Implementation for [Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training](https://arxiv.org/abs/2211.11138). 
 
-We will release the code and trained models soon.
+This paper is currently under review. We will release the code and trained models upon acceptance.
 
 
 <div align=center><img width="626" alt="image" src="https://user-images.githubusercontent.com/62683396/202874382-dfa516dc-f6a7-48ef-8a19-1ccd8c85d8b6.png"></div>
