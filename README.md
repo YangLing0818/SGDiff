@@ -15,6 +15,7 @@ cd SGDiff
 
 conda env create -f sgdiff.yaml
 conda activate sgdiff
+mkdir pretrained
 ```
 
 
