@@ -10,8 +10,8 @@ Official Implementation for [Diffusion-Based Scene Graph to Image Generation wit
 
 ## Environment
 ```
-git clone https://github.com/YangLing0818/SGDiff.git
-cd SGDiff
+git clone https://github.com/YangLing0818/Scene-Graph-to-Image-Diffusion-Models.git
+cd Scene-Graph-to-Image-Diffusion-Models
 
 conda env create -f sgdiff.yaml
 conda activate sgdiff
@@ -20,7 +20,7 @@ conda activate sgdiff
 
 ## Data and Model Preparation
 
-The instructions of data pre-processing can be [found here](https://github.com/YangLing0818/SGDiff/blob/main/DATA.md).
+The instructions of data pre-processing can be [found here](https://github.com/YangLing0818/Scene-Graph-to-Image-Diffusion-Models/blob/main/DATA.md).
 
 Our masked contrastive pre-trained models of SG-image pairs for COCO and VG datasets are provided in [here](https://www.dropbox.com/scl/fo/lccvtxuwxxblo3atnxlmg/h?rlkey=duy7dcwmy3a64auqoqiw8dv2e&dl=0), please download them and put them in the 'pretrained' directory.
 
