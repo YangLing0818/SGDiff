@@ -1,0 +1,104 @@
+model:
+  base_learning_rate: 1.0e-06
+  target: ldm.models.diffusion.ddpm.LatentDiffusion
+  params:
+    linear_start: 0.0015
+    linear_end: 0.0195
+    num_timesteps_cond: 1
+    log_every_t: 200
+    timesteps: 1000
+    first_stage_key: image
+    cond_stage_key: class_label
+    image_size: 32
+    channels: 4
+    cond_stage_trainable: false
+    conditioning_key: crossattn
+    cond_stage_forward: encode_graph_local_global
+    monitor: val/loss_simple_ema
+    unet_config:
+      target: ldm.modules.diffusionmodules.openaimodel.UNetModel
+      params:
+        image_size: 32
+        in_channels: 4
+        out_channels: 4
+        model_channels: 256
+        attention_resolutions:
+        - 4
+        - 2
+        - 1
+        num_res_blocks: 2
+        channel_mult:
+        - 1
+        - 2
+        - 4
+        num_head_channels: 32
+        use_spatial_transformer: true
+        transformer_depth: 1
+        context_local_dim: 1536
+        context_dim: 512
+    first_stage_config:
+      target: ldm.models.autoencoder.VQModelInterface
+      params:
+        embed_dim: 4
+        n_embed: 16384
+        ckpt_path: pretrained/vq-f8-model.ckpt
+        ddconfig:
+          double_z: false
+          z_channels: 4
+          resolution: 256
+          in_channels: 3
+          out_ch: 3
+          ch: 128
+          ch_mult:
+          - 1
+          - 2
+          - 2
+          - 4
+          num_res_blocks: 2
+          attn_resolutions:
+          - 32
+          dropout: 0.0
+        lossconfig:
+          target: torch.nn.Identity
+    cond_stage_config:
+      target: ldm.modules.cgip.cgip.CGIPModel
+      params:
+        num_objs: 184
+        num_preds: 7
+        layers: 5
+        width: 512
+        embed_dim: 512
+        ckpt_path: pretrained/sip_coco.pt
+data:
+  target: scripts.datamodule.DataModuleFromConfig
+  params:
+    batch_size: 16
+    num_workers: 4
+    wrap: false
+    train:
+      target: ldm.data.coco.COCOTrain
+      params:
+        image_dir: ./datasets/coco/images/train2017
+        instances_json: ./datasets/coco/annotations/instances_train2017.json
+        stuff_json: ./datasets/coco/annotations/stuff_train2017.json
+        stuff_only: True
+        image_size: 256
+    validation:
+      target: ldm.data.coco.COCOValidation
+      params:
+        image_dir: ./datasets/coco/images/val2017
+        instances_json: ./datasets/coco/annotations/instances_val2017.json
+        stuff_json: ./datasets/coco/annotations/stuff_val2017.json
+        stuff_only: True
+        image_size: 256
+
+lightning:
+  callbacks:
+    image_logger:
+      target: trainer.ImageLogger
+      params:
+        batch_frequency: 10000
+        max_images: 16
+        increase_log_steps: False
+  trainer:
+    benchmark: True

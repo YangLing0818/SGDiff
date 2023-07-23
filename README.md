@@ -3,36 +3,48 @@
 
 Official Implementation for [Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training](https://arxiv.org/abs/2211.11138). 
 
-This paper is currently under review. We will release the code and trained models upon acceptance.
-
-
-<div align=center><img width="626" alt="image" src="https://user-images.githubusercontent.com/62683396/202874382-dfa516dc-f6a7-48ef-8a19-1ccd8c85d8b6.png"></div>
-
-
-> Abstract: Generating images from graph-structured inputs, such as scene graphs, is uniquely challenging due to the difficulty of aligning nodes and connections in graphs with objects and their relations in images. Most existing methods address this challenge by using scene layouts, which are image-like representations of scene graphs designed to capture the coarse structures of scene images. Because scene layouts are manually crafted, the alignment with images may not be fully optimized, causing suboptimal compliance between the generated images and the original scene graphs. To tackle this issue, we propose to learn scene graph embeddings by directly optimizing their alignment with images. Specifically, we pre-train an encoder to extract both global and local information from scene graphs that are predictive of the corresponding images, relying on two loss functions: masked autoencoding loss and contrastive loss. The former trains embeddings by reconstructing randomly masked image regions, while the latter trains embeddings to discriminate between compliant and non-compliant images according to the scene graph. Given these embeddings, we build a latent diffusion model to generate images from scene graphs. The resulting method, called SGDiff, allows for the semantic manipulation of generated images by modifying scene graph nodes and connections. On the Visual Genome and COCO-Stuff datasets, we demonstrate that SGDiff outperforms state-of-the-art methods, as measured by both the Inception Score and Fréchet Inception Distance (FID) metrics. 
-
-
-
-
 ## Overview of The Proposed SGDiff
 
 <div align=center><img width="850" alt="image" src="https://user-images.githubusercontent.com/62683396/202852210-d91d6a63-f04d-4a02-ae5f-55f00f8c1ec5.png"></div>
 
-## Qualitative Evaluations
-### 1. Image Generation from Scene Graphs
 
-#### 1.1. On [Visual Genome](https://visualgenome.org/) (VG) Dataset
-<div align=center><img width="700" alt="image" src="https://user-images.githubusercontent.com/62683396/202874401-a33d16fb-e171-4734-91d8-23af802a385c.png">
-</div>
+## Environment
+```
+git clone https://github.com/YangLing0818/SGDiff.git
+cd SGDiff
 
-#### 1.2. On [COCO-Stuff](https://github.com/nightrome/cocostuff) Dataset
+conda env create -f sgdiff.yaml
+conda activate sgdiff
+```
 
-<div align=center><img width="680" alt="image" src="https://user-images.githubusercontent.com/62683396/202852055-23000ad2-9f21-41d0-a3e5-0b1b6f5eff36.png"></div>
 
-### 2. Semantic Image Manipulation
+## Data and Model Preparation
 
-<img width="1298" alt="image" src="https://user-images.githubusercontent.com/62683396/202852465-4c41d8b1-1f3a-4eca-9a5b-89e95ca1224c.png">
+The instructions of data pre-processing can be [found here](https://github.com/YangLing0818/SGDiff/blob/main/DATA.md).
 
-### 3. Ablation Study
-<div align=center><img width="478" alt="image" src="https://user-images.githubusercontent.com/62683396/202898893-ead4c0d4-1ecf-4688-935a-d65880d5ea61.png"></div>
+Our masked contrastive pre-trained models of SG-image pairs for COCO and VG datasets are provided in [here](https://www.dropbox.com/scl/fo/lccvtxuwxxblo3atnxlmg/h?rlkey=duy7dcwmy3a64auqoqiw8dv2e&dl=0), please download them and put them in the 'pretrained' directory.
 
+And the pretrained VQVAE for latent diffusion models can be obtained from https://ommer-lab.com/files/latent-diffusion/vq-f8.zip
+
+## Training
+
+```shell
+python trainer.py --base CONFIG_PATH -t --gpus GPU_IDs
+```
+
+## Sampling
+
+```shell
+python testset_ddim_sampler.py
+```
+
+## Citation
+If you found the codes are useful, please cite our paper
+```
+@article{yang2022diffusionsg,
+  title={Diffusion-based scene graph to image generation with masked contrastive pre-training},
+  author={Yang, Ling and Huang, Zhilin and Song, Yang and Hong, Shenda and Li, Guohao and Zhang, Wentao and Cui, Bin and Ghanem, Bernard and Yang, Ming-Hsuan},
+  journal={arXiv preprint arXiv:2211.11138},
+  year={2022}
+}
+```
