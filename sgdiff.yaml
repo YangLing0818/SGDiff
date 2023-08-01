@@ -176,3 +176,4 @@ dependencies:
     - yarl==1.8.1
     - zipp==3.9.0
     - taming-transformers==0.0.1
+    - transformers==4.3.1
