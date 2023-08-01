@@ -7,6 +7,9 @@ Official Implementation for [Diffusion-Based Scene Graph to Image Generation wit
 
 <div align=center><img width="850" alt="image" src="https://user-images.githubusercontent.com/62683396/202852210-d91d6a63-f04d-4a02-ae5f-55f00f8c1ec5.png"></div>
 
+<div align=center><img width="590" alt="image" src="https://github.com/YangLing0818/SGDiff/assets/62683396/bc341a3b-0ff2-4544-b0f6-3fe759b77097"></div>
+
+
 
 ## Environment
 ```
