@@ -28,10 +28,10 @@ The instructions of data pre-processing can be [found here](https://github.com/Y
 
 Our masked contrastive pre-trained models of SG-image pairs for COCO and VG datasets are provided in [here](https://www.dropbox.com/scl/fo/lccvtxuwxxblo3atnxlmg/h?rlkey=duy7dcwmy3a64auqoqiw8dv2e&dl=0), please download them and put them in the 'pretrained' directory.
 
-And the pretrained VQVAE for latent diffusion models can be obtained from https://ommer-lab.com/files/latent-diffusion/vq-f8.zip
+And the pretrained VQVAE for embedding image to latent can be obtained from https://ommer-lab.com/files/latent-diffusion/vq-f8.zip
 
 ## Training
-
+Kindly note that one should not skip the training stage and test directly.
 ```shell
 python trainer.py --base CONFIG_PATH -t --gpus GPU_IDs
 ```
