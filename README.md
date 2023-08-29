@@ -31,9 +31,9 @@ Our masked contrastive pre-trained models of SG-image pairs for COCO and VG data
 And the pretrained VQVAE for embedding image to latent can be obtained from https://ommer-lab.com/files/latent-diffusion/vq-f8.zip
 
 ## Training
-Kindly note that one should not skip the training stage and test directly.
+Kindly note that one should not skip the training stage and test directly. For single gpu, one can use
 ```shell
-python trainer.py --base CONFIG_PATH -t --gpus GPU_IDs
+python trainer.py --base CONFIG_PATH -t --gpus 0,
 ```
 
 ## Sampling
