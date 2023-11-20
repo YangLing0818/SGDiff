@@ -3,6 +3,12 @@
 
 Official Implementation for [Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training](https://arxiv.org/abs/2211.11138). 
 
+## TODO
+
+- [ ] Release the code of SG-image Masked Contrastive Pre-Training
+- [x] Release the pre-trained checkpoint and the training code of SG-to-image diffusion models
+
+
 ## Overview of The Proposed SGDiff
 
 <div align=center><img width="850" alt="image" src="https://user-images.githubusercontent.com/62683396/202852210-d91d6a63-f04d-4a02-ae5f-55f00f8c1ec5.png"></div>
