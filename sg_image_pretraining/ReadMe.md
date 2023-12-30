@@ -1,8 +1,8 @@
-### training
+### Masked Contrastive Pre-Training of Scene Graphs and Images
 
-1. modify the ```<path/to/data>``` in the ```training/configs.py``` and ```training/configs_coco.py```
+1. Modify the ```<path/to/data>``` in the ```training/configs.py``` and ```training/configs_coco.py```
 
-2. run 
+2. Run 
 
 ```shell
 conda activate sgdiff
