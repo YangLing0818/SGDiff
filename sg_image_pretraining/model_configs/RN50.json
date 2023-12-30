@@ -1,0 +1,15 @@
+{
+    "vision_cfg": {
+        "layers": [3,4,6,3],
+        "image_size": 256,
+        "width": 64,
+        "head_width": 64,
+        "mlp_ratio": 4.0,
+        "patch_size": null,
+    },
+    "graph_cfg": {
+        "layers": 5,
+        "width": 512,
+    },
+    "embed_dim": 1024,
+}
