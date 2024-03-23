@@ -40,6 +40,12 @@ Kindly note that one **should not skip the training stage** and test directly. F
 python trainer.py --base CONFIG_PATH -t --gpus 0,
 ```
 
+***NOT OFFICIAL:***
+Alternatively, if you don't want to train the model from scratch you can download trained weights from the following link:
+[sgdiff_epoch_335.ckpt](https://flinders-my.sharepoint.com/:u:/g/personal/neau0001_flinders_edu_au/EQTJcd62dU1HirhpNtqzDIABsrZJqphm1nJV3dDggSSVxA?e=PHPjRk)
+
+Checkpoint trained for 335 epochs, FID=23.54 and IS=18.02 on the test set of Visual Genome.
+
 ## Sampling
 
 ```shell
