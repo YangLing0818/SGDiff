@@ -44,7 +44,7 @@ python trainer.py --base CONFIG_PATH -t --gpus 0,
 Alternatively, if you don't want to train the model from scratch you can download trained weights from the following link:
 [VG weight](https://drive.google.com/file/d/1bzYgv_lmCUL7wrh9G3t3169ITbAuMbYo/view?usp=sharing), [COCO weight](https://drive.google.com/file/d/1HAj2C3xHTrm-txVCq_cSSbr5NvFPnasR/view?usp=sharing) 
 
-Checkpoint trained for 335 epochs, FID=23.54 and IS=18.02 on the test set of Visual Genome.
+Checkpoint trained for only 150 epochs.
 
 ## Sampling
 
