@@ -42,7 +42,7 @@ python trainer.py --base CONFIG_PATH -t --gpus 0,
 
 ***NOT OFFICIAL:***
 Alternatively, if you don't want to train the model from scratch you can download trained weights from the following link:
-[sgdiff_epoch_335.ckpt](https://flinders-my.sharepoint.com/:u:/g/personal/neau0001_flinders_edu_au/EQTJcd62dU1HirhpNtqzDIABsrZJqphm1nJV3dDggSSVxA?e=PHPjRk)
+[VG weight](https://drive.google.com/file/d/1bzYgv_lmCUL7wrh9G3t3169ITbAuMbYo/view?usp=sharing), [COCO weight](https://drive.google.com/file/d/1HAj2C3xHTrm-txVCq_cSSbr5NvFPnasR/view?usp=sharing) 
 
 Checkpoint trained for 335 epochs, FID=23.54 and IS=18.02 on the test set of Visual Genome.
 
