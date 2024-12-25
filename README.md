@@ -3,6 +3,7 @@
 
 Official Implementation for [Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training](https://arxiv.org/abs/2211.11138). 
 
+🚩 New Updates : We release [LAION-SG](https://github.com/mengcye/LAION-SG), [a large-scale dataset](https://huggingface.co/datasets/mengcy/LAION-SG) with high-quality structural annotations of scene graphs (SG), which precisely describe attributes and relationships of multiple objects, effectively representing the semantic structure in complex scenes. Based on LAION-SG, we also provide a new foundation model [SDXL-SG](https://drive.google.com/file/d/1mdC3Np4KkV9V24K1gcyddsG5AIv5S0MT/view?usp=sharing) to incorporate structural annotation information into the generation process.
 
 ## Overview of The Proposed SGDiff
 
@@ -60,5 +61,12 @@ If you found the codes are useful, please cite our paper
   author={Yang, Ling and Huang, Zhilin and Song, Yang and Hong, Shenda and Li, Guohao and Zhang, Wentao and Cui, Bin and Ghanem, Bernard and Yang, Ming-Hsuan},
   journal={arXiv preprint arXiv:2211.11138},
   year={2022}
+}
+
+@article{li2024laion,
+  title={LAION-SG: An Enhanced Large-Scale Dataset for Training Complex Image-Text Models with Structural Annotations},
+  author={Li, Zejian and Meng, Chenye and Li, Yize and Yang, Ling and Zhang, Shengyuan and Ma, Jiarui and Li, Jiayi and Yang, Guang and Yang, Changyuan and Yang, Zhiyuan and others},
+  journal={arXiv preprint arXiv:2412.08580},
+  year={2024}
 }
 ```
